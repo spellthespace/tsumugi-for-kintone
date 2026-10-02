@@ -33,9 +33,12 @@ jobs:
           npm run pack
           rm private.ppk
           mv dist/plugin.zip "tsumugi-${GITHUB_REF_NAME}.zip"
+          # 配布ページから「最新版」を固定のURLで落とせるよう、版番号なしの名前でも付ける
+          # （https://github.com/spellthespace/tsumugi-for-kintone/releases/latest/download/tsumugi-for-kintone.zip）
+          cp "tsumugi-${GITHUB_REF_NAME}.zip" tsumugi-for-kintone.zip
       - name: Release を作る
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           notes=$(awk -v v="${GITHUB_REF_NAME#v}" '$0 ~ "^## \\[?"v {f=1; next} f && /^## /{exit} f' CHANGELOG.md)
-          gh release create "$GITHUB_REF_NAME" "tsumugi-${GITHUB_REF_NAME}.zip" LICENSE THIRD_PARTY_LICENSES.txt --title "$GITHUB_REF_NAME" --notes "${notes:-$GITHUB_REF_NAME}"
+          gh release create "$GITHUB_REF_NAME" "tsumugi-${GITHUB_REF_NAME}.zip" tsumugi-for-kintone.zip LICENSE THIRD_PARTY_LICENSES.txt --title "$GITHUB_REF_NAME" --notes "${notes:-$GITHUB_REF_NAME}"
