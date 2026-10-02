@@ -1,0 +1,24 @@
+{
+  "manifest_version": 1,
+  "version": "0.1.0",
+  "type": "APP",
+  "name": {
+    "ja": "Tsumugi — アプリ構成図・定義書",
+    "en": "Tsumugi — App ER Diagram & Spec Sheet"
+  },
+  "description": {
+    "ja": "閲覧できる全アプリのER図（ルックアップ・関連レコード一覧・アプリアクション）を描き、定義書と一緒にPDFへ出力します。",
+    "en": "Draws an ER diagram of all visible apps (lookups, related records, app actions) and prints it with field definitions as PDF."
+  },
+  "icon": "image/icon.png",
+  "homepage_url": {
+    "ja": "https://github.com/spellthespace/tsumugi-for-kintone",
+    "en": "https://github.com/spellthespace/tsumugi-for-kintone"
+  },
+  "desktop": {
+    "js": [
+      "js/desktop.js"
+    ],
+    "css": []
+  }
+}

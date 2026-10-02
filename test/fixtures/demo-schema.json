@@ -1,0 +1,1150 @@
+{
+  "fetchedAt": "2026-10-02T02:15:56.603Z",
+  "apps": [
+    {
+      "id": "210",
+      "name": "取引先マスタ",
+      "spaceId": "15",
+      "spaceName": "ER図プラグイン検証（部品メーカーデモ）",
+      "description": "",
+      "fields": [
+        {
+          "code": "取引先コード",
+          "label": "取引先コード",
+          "type": "SINGLE_LINE_TEXT",
+          "required": true,
+          "unique": true,
+          "note": ""
+        },
+        {
+          "code": "取引先名",
+          "label": "取引先名",
+          "type": "SINGLE_LINE_TEXT",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "取引区分",
+          "label": "取引区分",
+          "type": "DROP_DOWN",
+          "required": false,
+          "unique": false,
+          "note": "選択肢: 完成車メーカー / Tier1 / 商社 / その他"
+        },
+        {
+          "code": "所在地",
+          "label": "所在地",
+          "type": "SINGLE_LINE_TEXT",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "締め日",
+          "label": "締め日",
+          "type": "SINGLE_LINE_TEXT",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "受注一覧",
+          "label": "受注一覧",
+          "type": "REFERENCE_TABLE",
+          "required": false,
+          "unique": false,
+          "note": "関連レコード: 受注（取引先コード = 取引先コード）"
+        },
+        {
+          "code": "請求一覧",
+          "label": "請求一覧",
+          "type": "REFERENCE_TABLE",
+          "required": false,
+          "unique": false,
+          "note": "関連レコード: 請求（取引先コード = 取引先コード）"
+        },
+        {
+          "code": "レコード番号",
+          "label": "レコード番号",
+          "type": "RECORD_NUMBER",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "更新者",
+          "label": "更新者",
+          "type": "MODIFIER",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "作成者",
+          "label": "作成者",
+          "type": "CREATOR",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "更新日時",
+          "label": "更新日時",
+          "type": "UPDATED_TIME",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "作成日時",
+          "label": "作成日時",
+          "type": "CREATED_TIME",
+          "required": false,
+          "unique": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "211",
+      "name": "品目区分マスタ",
+      "spaceId": "15",
+      "spaceName": "ER図プラグイン検証（部品メーカーデモ）",
+      "description": "",
+      "fields": [
+        {
+          "code": "区分コード",
+          "label": "区分コード",
+          "type": "SINGLE_LINE_TEXT",
+          "required": true,
+          "unique": true,
+          "note": ""
+        },
+        {
+          "code": "区分名",
+          "label": "区分名",
+          "type": "SINGLE_LINE_TEXT",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "レコード番号",
+          "label": "レコード番号",
+          "type": "RECORD_NUMBER",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "更新者",
+          "label": "更新者",
+          "type": "MODIFIER",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "作成者",
+          "label": "作成者",
+          "type": "CREATOR",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "更新日時",
+          "label": "更新日時",
+          "type": "UPDATED_TIME",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "作成日時",
+          "label": "作成日時",
+          "type": "CREATED_TIME",
+          "required": false,
+          "unique": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "212",
+      "name": "品番マスタ",
+      "spaceId": "15",
+      "spaceName": "ER図プラグイン検証（部品メーカーデモ）",
+      "description": "",
+      "fields": [
+        {
+          "code": "品番",
+          "label": "品番",
+          "type": "SINGLE_LINE_TEXT",
+          "required": true,
+          "unique": true,
+          "note": ""
+        },
+        {
+          "code": "品名",
+          "label": "品名",
+          "type": "SINGLE_LINE_TEXT",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "図番",
+          "label": "図番",
+          "type": "SINGLE_LINE_TEXT",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "区分名",
+          "label": "区分名",
+          "type": "SINGLE_LINE_TEXT",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "主要取引先名",
+          "label": "主要取引先名",
+          "type": "SINGLE_LINE_TEXT",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "標準単価",
+          "label": "標準単価",
+          "type": "NUMBER",
+          "required": false,
+          "unique": false,
+          "note": "単位: 円"
+        },
+        {
+          "code": "標準リードタイム",
+          "label": "標準リードタイム",
+          "type": "NUMBER",
+          "required": false,
+          "unique": false,
+          "note": "単位: 日"
+        },
+        {
+          "code": "区分コード",
+          "label": "区分コード",
+          "type": "LOOKUP",
+          "required": false,
+          "unique": false,
+          "note": "ルックアップ: 品目区分マスタ の 区分コード（コピー: 区分名→区分名）"
+        },
+        {
+          "code": "主要取引先コード",
+          "label": "主要取引先コード",
+          "type": "LOOKUP",
+          "required": false,
+          "unique": false,
+          "note": "ルックアップ: 取引先マスタ の 取引先コード（コピー: 取引先名→主要取引先名）"
+        },
+        {
+          "code": "レコード番号",
+          "label": "レコード番号",
+          "type": "RECORD_NUMBER",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "更新者",
+          "label": "更新者",
+          "type": "MODIFIER",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "作成者",
+          "label": "作成者",
+          "type": "CREATOR",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "更新日時",
+          "label": "更新日時",
+          "type": "UPDATED_TIME",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "作成日時",
+          "label": "作成日時",
+          "type": "CREATED_TIME",
+          "required": false,
+          "unique": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "213",
+      "name": "設備マスタ",
+      "spaceId": "15",
+      "spaceName": "ER図プラグイン検証（部品メーカーデモ）",
+      "description": "",
+      "fields": [
+        {
+          "code": "設備コード",
+          "label": "設備コード",
+          "type": "SINGLE_LINE_TEXT",
+          "required": true,
+          "unique": true,
+          "note": ""
+        },
+        {
+          "code": "設備名",
+          "label": "設備名",
+          "type": "SINGLE_LINE_TEXT",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "ライン",
+          "label": "ライン",
+          "type": "DROP_DOWN",
+          "required": false,
+          "unique": false,
+          "note": "選択肢: プレス / 溶接 / 切削 / 検査"
+        },
+        {
+          "code": "レコード番号",
+          "label": "レコード番号",
+          "type": "RECORD_NUMBER",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "更新者",
+          "label": "更新者",
+          "type": "MODIFIER",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "作成者",
+          "label": "作成者",
+          "type": "CREATOR",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "更新日時",
+          "label": "更新日時",
+          "type": "UPDATED_TIME",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "作成日時",
+          "label": "作成日時",
+          "type": "CREATED_TIME",
+          "required": false,
+          "unique": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "214",
+      "name": "受注",
+      "spaceId": "15",
+      "spaceName": "ER図プラグイン検証（部品メーカーデモ）",
+      "description": "",
+      "fields": [
+        {
+          "code": "受注番号",
+          "label": "受注番号",
+          "type": "SINGLE_LINE_TEXT",
+          "required": true,
+          "unique": true,
+          "note": ""
+        },
+        {
+          "code": "取引先名",
+          "label": "取引先名",
+          "type": "SINGLE_LINE_TEXT",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "受注日",
+          "label": "受注日",
+          "type": "DATE",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "納期",
+          "label": "納期",
+          "type": "DATE",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "受注状況",
+          "label": "受注状況",
+          "type": "DROP_DOWN",
+          "required": false,
+          "unique": false,
+          "note": "選択肢: 受注 / 生産中 / 出荷済 / 請求済"
+        },
+        {
+          "code": "受注明細",
+          "label": "受注明細",
+          "type": "SUBTABLE",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "明細_品名",
+          "label": "品名",
+          "type": "SINGLE_LINE_TEXT",
+          "required": false,
+          "unique": false,
+          "subtable": "受注明細",
+          "note": ""
+        },
+        {
+          "code": "明細_単価",
+          "label": "単価",
+          "type": "NUMBER",
+          "required": false,
+          "unique": false,
+          "subtable": "受注明細",
+          "note": "単位: 円"
+        },
+        {
+          "code": "明細_数量",
+          "label": "数量",
+          "type": "NUMBER",
+          "required": false,
+          "unique": false,
+          "subtable": "受注明細",
+          "note": "単位: 個"
+        },
+        {
+          "code": "明細_金額",
+          "label": "金額",
+          "type": "CALC",
+          "required": false,
+          "unique": false,
+          "subtable": "受注明細",
+          "note": "計算式: 明細_単価*明細_数量"
+        },
+        {
+          "code": "明細_品番",
+          "label": "品番",
+          "type": "LOOKUP",
+          "required": false,
+          "unique": false,
+          "subtable": "受注明細",
+          "note": "ルックアップ: 品番マスタ の 品番（コピー: 品名→明細_品名、標準単価→明細_単価）"
+        },
+        {
+          "code": "受注金額",
+          "label": "受注金額",
+          "type": "CALC",
+          "required": false,
+          "unique": false,
+          "note": "計算式: SUM(明細_金額)"
+        },
+        {
+          "code": "取引先コード",
+          "label": "取引先コード",
+          "type": "LOOKUP",
+          "required": false,
+          "unique": false,
+          "note": "ルックアップ: 取引先マスタ の 取引先コード（コピー: 取引先名→取引先名）"
+        },
+        {
+          "code": "生産指示一覧",
+          "label": "生産指示一覧",
+          "type": "REFERENCE_TABLE",
+          "required": false,
+          "unique": false,
+          "note": "関連レコード: 生産指示（受注番号 = 受注番号）"
+        },
+        {
+          "code": "出荷一覧",
+          "label": "出荷一覧",
+          "type": "REFERENCE_TABLE",
+          "required": false,
+          "unique": false,
+          "note": "関連レコード: 出荷（受注番号 = 受注番号）"
+        },
+        {
+          "code": "レコード番号",
+          "label": "レコード番号",
+          "type": "RECORD_NUMBER",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "更新者",
+          "label": "更新者",
+          "type": "MODIFIER",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "作成者",
+          "label": "作成者",
+          "type": "CREATOR",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "更新日時",
+          "label": "更新日時",
+          "type": "UPDATED_TIME",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "作成日時",
+          "label": "作成日時",
+          "type": "CREATED_TIME",
+          "required": false,
+          "unique": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "215",
+      "name": "生産指示",
+      "spaceId": "15",
+      "spaceName": "ER図プラグイン検証（部品メーカーデモ）",
+      "description": "",
+      "fields": [
+        {
+          "code": "指示番号",
+          "label": "指示番号",
+          "type": "SINGLE_LINE_TEXT",
+          "required": true,
+          "unique": true,
+          "note": ""
+        },
+        {
+          "code": "取引先名",
+          "label": "取引先名",
+          "type": "SINGLE_LINE_TEXT",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "納期",
+          "label": "納期",
+          "type": "DATE",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "品名",
+          "label": "品名",
+          "type": "SINGLE_LINE_TEXT",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "指示数量",
+          "label": "指示数量",
+          "type": "NUMBER",
+          "required": false,
+          "unique": false,
+          "note": "単位: 個"
+        },
+        {
+          "code": "着手予定日",
+          "label": "着手予定日",
+          "type": "DATE",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "進捗",
+          "label": "進捗",
+          "type": "DROP_DOWN",
+          "required": false,
+          "unique": false,
+          "note": "選択肢: 未着手 / 加工中 / 検査待ち / 完了"
+        },
+        {
+          "code": "受注番号",
+          "label": "受注番号",
+          "type": "LOOKUP",
+          "required": false,
+          "unique": false,
+          "note": "ルックアップ: 受注 の 受注番号（コピー: 取引先名→取引先名、納期→納期）"
+        },
+        {
+          "code": "品番",
+          "label": "品番",
+          "type": "LOOKUP",
+          "required": false,
+          "unique": false,
+          "note": "ルックアップ: 品番マスタ の 品番（コピー: 品名→品名）"
+        },
+        {
+          "code": "工程実績一覧",
+          "label": "工程実績一覧",
+          "type": "REFERENCE_TABLE",
+          "required": false,
+          "unique": false,
+          "note": "関連レコード: 工程実績（指示番号 = 指示番号）"
+        },
+        {
+          "code": "レコード番号",
+          "label": "レコード番号",
+          "type": "RECORD_NUMBER",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "更新者",
+          "label": "更新者",
+          "type": "MODIFIER",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "作成者",
+          "label": "作成者",
+          "type": "CREATOR",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "更新日時",
+          "label": "更新日時",
+          "type": "UPDATED_TIME",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "作成日時",
+          "label": "作成日時",
+          "type": "CREATED_TIME",
+          "required": false,
+          "unique": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "216",
+      "name": "工程実績",
+      "spaceId": "15",
+      "spaceName": "ER図プラグイン検証（部品メーカーデモ）",
+      "description": "",
+      "fields": [
+        {
+          "code": "実績番号",
+          "label": "実績番号",
+          "type": "SINGLE_LINE_TEXT",
+          "required": true,
+          "unique": true,
+          "note": ""
+        },
+        {
+          "code": "品番",
+          "label": "品番",
+          "type": "SINGLE_LINE_TEXT",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "設備名",
+          "label": "設備名",
+          "type": "SINGLE_LINE_TEXT",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "作業日",
+          "label": "作業日",
+          "type": "DATE",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "工程",
+          "label": "工程",
+          "type": "DROP_DOWN",
+          "required": false,
+          "unique": false,
+          "note": "選択肢: プレス / 溶接 / 切削 / 検査"
+        },
+        {
+          "code": "良品数",
+          "label": "良品数",
+          "type": "NUMBER",
+          "required": false,
+          "unique": false,
+          "note": "単位: 個"
+        },
+        {
+          "code": "不良数",
+          "label": "不良数",
+          "type": "NUMBER",
+          "required": false,
+          "unique": false,
+          "note": "単位: 個"
+        },
+        {
+          "code": "作業担当",
+          "label": "作業担当",
+          "type": "USER_SELECT",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "指示番号",
+          "label": "指示番号",
+          "type": "LOOKUP",
+          "required": false,
+          "unique": false,
+          "note": "ルックアップ: 生産指示 の 指示番号（コピー: 品番→品番）"
+        },
+        {
+          "code": "設備コード",
+          "label": "設備コード",
+          "type": "LOOKUP",
+          "required": false,
+          "unique": false,
+          "note": "ルックアップ: 設備マスタ の 設備コード（コピー: 設備名→設備名）"
+        },
+        {
+          "code": "レコード番号",
+          "label": "レコード番号",
+          "type": "RECORD_NUMBER",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "更新者",
+          "label": "更新者",
+          "type": "MODIFIER",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "作成者",
+          "label": "作成者",
+          "type": "CREATOR",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "更新日時",
+          "label": "更新日時",
+          "type": "UPDATED_TIME",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "作成日時",
+          "label": "作成日時",
+          "type": "CREATED_TIME",
+          "required": false,
+          "unique": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "217",
+      "name": "出荷",
+      "spaceId": "15",
+      "spaceName": "ER図プラグイン検証（部品メーカーデモ）",
+      "description": "",
+      "fields": [
+        {
+          "code": "出荷番号",
+          "label": "出荷番号",
+          "type": "SINGLE_LINE_TEXT",
+          "required": true,
+          "unique": true,
+          "note": ""
+        },
+        {
+          "code": "取引先コード",
+          "label": "取引先コード",
+          "type": "SINGLE_LINE_TEXT",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "取引先名",
+          "label": "取引先名",
+          "type": "SINGLE_LINE_TEXT",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "出荷日",
+          "label": "出荷日",
+          "type": "DATE",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "出荷金額",
+          "label": "出荷金額",
+          "type": "NUMBER",
+          "required": false,
+          "unique": false,
+          "note": "単位: 円"
+        },
+        {
+          "code": "受注番号",
+          "label": "受注番号",
+          "type": "LOOKUP",
+          "required": false,
+          "unique": false,
+          "note": "ルックアップ: 受注 の 受注番号（コピー: 取引先コード→取引先コード、取引先名→取引先名、受注金額→出荷金額）"
+        },
+        {
+          "code": "レコード番号",
+          "label": "レコード番号",
+          "type": "RECORD_NUMBER",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "更新者",
+          "label": "更新者",
+          "type": "MODIFIER",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "作成者",
+          "label": "作成者",
+          "type": "CREATOR",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "更新日時",
+          "label": "更新日時",
+          "type": "UPDATED_TIME",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "作成日時",
+          "label": "作成日時",
+          "type": "CREATED_TIME",
+          "required": false,
+          "unique": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "218",
+      "name": "請求",
+      "spaceId": "15",
+      "spaceName": "ER図プラグイン検証（部品メーカーデモ）",
+      "description": "",
+      "fields": [
+        {
+          "code": "請求番号",
+          "label": "請求番号",
+          "type": "SINGLE_LINE_TEXT",
+          "required": true,
+          "unique": true,
+          "note": ""
+        },
+        {
+          "code": "取引先名",
+          "label": "取引先名",
+          "type": "SINGLE_LINE_TEXT",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "請求日",
+          "label": "請求日",
+          "type": "DATE",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "請求金額",
+          "label": "請求金額",
+          "type": "NUMBER",
+          "required": false,
+          "unique": false,
+          "note": "単位: 円"
+        },
+        {
+          "code": "入金状況",
+          "label": "入金状況",
+          "type": "DROP_DOWN",
+          "required": false,
+          "unique": false,
+          "note": "選択肢: 未入金 / 入金済"
+        },
+        {
+          "code": "取引先コード",
+          "label": "取引先コード",
+          "type": "LOOKUP",
+          "required": false,
+          "unique": false,
+          "note": "ルックアップ: 取引先マスタ の 取引先コード（コピー: 取引先名→取引先名）"
+        },
+        {
+          "code": "対象出荷",
+          "label": "対象出荷",
+          "type": "REFERENCE_TABLE",
+          "required": false,
+          "unique": false,
+          "note": "関連レコード: 出荷（取引先コード = 取引先コード）"
+        },
+        {
+          "code": "レコード番号",
+          "label": "レコード番号",
+          "type": "RECORD_NUMBER",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "更新者",
+          "label": "更新者",
+          "type": "MODIFIER",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "作成者",
+          "label": "作成者",
+          "type": "CREATOR",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "更新日時",
+          "label": "更新日時",
+          "type": "UPDATED_TIME",
+          "required": false,
+          "unique": false,
+          "note": ""
+        },
+        {
+          "code": "作成日時",
+          "label": "作成日時",
+          "type": "CREATED_TIME",
+          "required": false,
+          "unique": false,
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "kind": "related",
+      "fromApp": "210",
+      "fromField": "受注一覧",
+      "toApp": "214",
+      "toField": "取引先コード",
+      "label": "受注一覧"
+    },
+    {
+      "kind": "related",
+      "fromApp": "210",
+      "fromField": "請求一覧",
+      "toApp": "218",
+      "toField": "取引先コード",
+      "label": "請求一覧"
+    },
+    {
+      "kind": "lookup",
+      "fromApp": "212",
+      "fromField": "区分コード",
+      "toApp": "211",
+      "toField": "区分コード",
+      "label": "区分コード"
+    },
+    {
+      "kind": "lookup",
+      "fromApp": "212",
+      "fromField": "主要取引先コード",
+      "toApp": "210",
+      "toField": "取引先コード",
+      "label": "主要取引先コード"
+    },
+    {
+      "kind": "lookup",
+      "fromApp": "214",
+      "fromField": "取引先コード",
+      "toApp": "210",
+      "toField": "取引先コード",
+      "label": "取引先コード"
+    },
+    {
+      "kind": "lookup",
+      "fromApp": "214",
+      "fromField": "明細_品番",
+      "toApp": "212",
+      "toField": "品番",
+      "label": "受注明細.品番"
+    },
+    {
+      "kind": "related",
+      "fromApp": "214",
+      "fromField": "生産指示一覧",
+      "toApp": "215",
+      "toField": "受注番号",
+      "label": "生産指示一覧"
+    },
+    {
+      "kind": "related",
+      "fromApp": "214",
+      "fromField": "出荷一覧",
+      "toApp": "217",
+      "toField": "受注番号",
+      "label": "出荷一覧"
+    },
+    {
+      "kind": "action",
+      "fromApp": "214",
+      "fromField": null,
+      "toApp": "215",
+      "toField": null,
+      "label": "生産指示を作成"
+    },
+    {
+      "kind": "action",
+      "fromApp": "214",
+      "fromField": null,
+      "toApp": "217",
+      "toField": null,
+      "label": "出荷を登録"
+    },
+    {
+      "kind": "lookup",
+      "fromApp": "215",
+      "fromField": "品番",
+      "toApp": "212",
+      "toField": "品番",
+      "label": "品番"
+    },
+    {
+      "kind": "related",
+      "fromApp": "215",
+      "fromField": "工程実績一覧",
+      "toApp": "216",
+      "toField": "指示番号",
+      "label": "工程実績一覧"
+    },
+    {
+      "kind": "lookup",
+      "fromApp": "215",
+      "fromField": "受注番号",
+      "toApp": "214",
+      "toField": "受注番号",
+      "label": "受注番号"
+    },
+    {
+      "kind": "lookup",
+      "fromApp": "216",
+      "fromField": "設備コード",
+      "toApp": "213",
+      "toField": "設備コード",
+      "label": "設備コード"
+    },
+    {
+      "kind": "lookup",
+      "fromApp": "216",
+      "fromField": "指示番号",
+      "toApp": "215",
+      "toField": "指示番号",
+      "label": "指示番号"
+    },
+    {
+      "kind": "lookup",
+      "fromApp": "217",
+      "fromField": "受注番号",
+      "toApp": "214",
+      "toField": "受注番号",
+      "label": "受注番号"
+    },
+    {
+      "kind": "related",
+      "fromApp": "218",
+      "fromField": "対象出荷",
+      "toApp": "217",
+      "toField": "取引先コード",
+      "label": "対象出荷"
+    },
+    {
+      "kind": "lookup",
+      "fromApp": "218",
+      "fromField": "取引先コード",
+      "toApp": "210",
+      "toField": "取引先コード",
+      "label": "取引先コード"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,41 @@
+name: Release
+
+# v で始まるタグ（例: v0.1.0）を push すると、署名済みのプラグイン zip を Release に付ける
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - name: manifest のバージョンとタグが一致するか確かめる
+        run: |
+          v=$(node -p "require('./plugin/manifest.json').version")
+          [ "v$v" = "$GITHUB_REF_NAME" ] || { echo "manifest.json の version ($v) とタグ ($GITHUB_REF_NAME) が違います"; exit 1; }
+      - name: 署名してパッケージする
+        env:
+          PLUGIN_PPK: ${{ secrets.PLUGIN_PPK }}
+        run: |
+          [ -n "$PLUGIN_PPK" ] || { echo "シークレット PLUGIN_PPK（署名鍵）がありません"; exit 1; }
+          printf '%s' "$PLUGIN_PPK" > private.ppk
+          npm run pack
+          rm private.ppk
+          mv dist/plugin.zip "tsumugi-${GITHUB_REF_NAME}.zip"
+      - name: Release を作る
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          notes=$(awk -v v="${GITHUB_REF_NAME#v}" '$0 ~ "^## \\[?"v {f=1; next} f && /^## /{exit} f' CHANGELOG.md)
+          gh release create "$GITHUB_REF_NAME" "tsumugi-${GITHUB_REF_NAME}.zip" LICENSE THIRD_PARTY_LICENSES.txt --title "$GITHUB_REF_NAME" --notes "${notes:-$GITHUB_REF_NAME}"

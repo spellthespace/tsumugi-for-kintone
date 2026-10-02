@@ -1,0 +1,34 @@
+{
+  "name": "tsumugi-for-kintone",
+  "version": "0.1.0",
+  "private": true,
+  "description": "kintone の全アプリのER図とアプリ定義書を描き、PDFに出力するプラグイン",
+  "type": "module",
+  "license": "MIT",
+  "author": "Ｓｐｅｌｌ Ｔｈｅ Ｓｐａｃｅ合同会社",
+  "homepage": "https://github.com/spellthespace/tsumugi-for-kintone#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spellthespace/tsumugi-for-kintone.git"
+  },
+  "bugs": {
+    "url": "https://github.com/spellthespace/tsumugi-for-kintone/issues"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "pack": "npm run build && kintone-plugin-packer --ppk private.ppk --out dist/plugin.zip dist/plugin",
+    "upload": "npm run pack && node --env-file=.env scripts/upload.mjs pnoefmkekmgabflgekfcbilhmdnfjhpl",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "dump": "tsx --env-file=.env scripts/dump.ts"
+  },
+  "devDependencies": {
+    "@kintone/plugin-packer": "^9.1.2",
+    "@types/node": "^26.6.4",
+    "elkjs": "^0.12.0",
+    "esbuild": "^0.28.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}
